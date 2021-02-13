@@ -36,13 +36,6 @@ function App() {
         </div>
 
         <div className="center_div">
-          {/*<input
-            type="text"
-            value={inputList}
-            placeholder="Add Items"
-            onChange={itemEvent}
-          />
-         <button onClick={listOfItems}> + </button>*/}
           <ol>
             {/* */}
             {items.map((itemval, index) => {
@@ -56,6 +49,15 @@ function App() {
               );
             })}
           </ol>
+        </div>
+        <div className="bottom">
+          <input
+            type="text"
+            value={inputList}
+            placeholder="Add Items"
+            onChange={itemEvent}
+          />
+          <button onClick={listOfItems}> + </button>
         </div>
       </div>
     </div>
