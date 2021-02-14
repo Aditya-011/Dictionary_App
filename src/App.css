@@ -93,17 +93,23 @@ body::before {
   height: 1.5rem;
   padding: 0.2rem 0.7rem;
   width: 30vw;
+  margin-top: 1.2rem;
   border: none;
   border-bottom: 2px solid var(--borderColor);
   outline: none;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
+.bottom input:focus {
+  border-bottom: 2px solid var(--bg2);
+}
 .bottom button {
   height: 50px;
   width: 50px;
   border-radius: 50%;
   border: none;
+  margin-top: 1.2rem;
+
   outline: none;
   background: var(--bg2);
   color: var(--white);

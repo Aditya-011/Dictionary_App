@@ -13,12 +13,12 @@ const List = (props) => {
       <li>
         <span>
           <input type="checkbox" id="tick" className="tick"></input>
-          <label for="tick">
+          <label htmlFor="tick">
             <b className="mainText">{props.text}</b>
           </label>
         </span>
         <span className="time">
-          <span>11:14 PM</span>{" "}
+          <span>{`${props.hours}:${props.minutes}`} </span>{" "}
           <i
             className="fa fa-trash"
             onClick={() => {
