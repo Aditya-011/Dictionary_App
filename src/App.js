@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import List from "./components/List";
+import toast, { Toaster } from "react-hot-toast";
+
 function App() {
   var date = new Date();
   var days = [
@@ -42,6 +44,9 @@ function App() {
     setInputList(e.target.value);
   };
   function listOfItems() {
+    if (!inputList) {
+      toast.error("Please Enter a task");
+    }
     increment();
     setItems((oldItems) => {
       return [...oldItems, inputList];
@@ -58,6 +63,7 @@ function App() {
   }
   return (
     <div className="App">
+      <Toaster></Toaster>
       <h1 className="title">ToDo List</h1>
       <div className="wrapper">
         <div className="head">

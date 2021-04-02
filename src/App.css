@@ -37,6 +37,8 @@ body::before {
   user-select: none;
 }
 .wrapper {
+  min-height: 80vh;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -54,7 +56,7 @@ body::before {
   border-bottom: solid var(--borderColor) 2px;
   width: 100%;
   width: 55vw;
-  height: 7vh;
+  height: 3rem;
 }
 .dateUp1 {
   color: var(--bg2);
@@ -98,11 +100,12 @@ body::before {
   border-top: solid 2px var(--borderColor);
 }
 .center_div {
-  min-height: 45vh;
   max-height: 45vh;
+  min-height: 45vh;
   width: 55vw;
   overflow-y: scroll;
 }
+
 .bottom input {
   height: 1.5rem;
   padding: 0.2rem 0.7rem;
@@ -172,13 +175,15 @@ li:hover {
 }
 .time {
   font-size: 0.8rem;
+  display: flex;
+  align-items: center;
   color: var(--taskgray);
 }
 .time :nth-child(1) {
   margin-left: 10px;
   margin-right: 10px;
 }
-.fa {
+.delete {
   cursor: pointer;
   color: var(--bg2);
   font-size: 1.1rem;
@@ -216,5 +221,44 @@ li:hover {
   .dateUp1,
   .dateUp2 {
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .dateUp1,
+  .dateUp2 {
+    font-size: 1rem;
+  }
+  .head {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .center_div {
+    min-height: 35vh;
+  }
+  .bottom button {
+    height: 40px;
+    width: 40px;
+    margin-top: 0.5rem;
+  }
+  .bottom input {
+    margin-top: 0.5rem;
+    height: 0.8rem;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .center_div {
+    min-height: 25vh;
+    overflow-y: scroll;
+  }
+  .bottom button {
+    height: 40px;
+    width: 40px;
+    margin-top: 0.3rem;
+  }
+  .bottom input {
+    margin-top: 0.3rem;
+    height: 0.8rem;
   }
 }

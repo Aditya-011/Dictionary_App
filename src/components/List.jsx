@@ -1,29 +1,37 @@
 import React from "react";
+import { AiFillDelete } from "react-icons/ai";
+import toast, { Toaster } from "react-hot-toast";
 
 const List = (props) => {
+  const [flag, setFlag] = React.useState(true);
   return (
     <>
-      {/*<i
-        className="fa fa-times"
-        onClick={() => {
-          props.onSelect(props.id);
-        }}
-        aria-hidden="true"
-    ></i>*/}
+      <Toaster />
       <li className="taskWrapper">
         <div className="t1">
-          <input type="checkbox" id="tick" className="tick"></input>
+          <input
+            type="checkbox"
+            id="tick"
+            className="tick"
+            onClick={() => {
+              if (flag) {
+                toast.success("Task Completed !!!");
+                setFlag(false);
+              } else {
+                setFlag(true);
+              }
+            }}
+          ></input>
         </div>
         <b className="mainText">{props.text}</b>
         <div className="time">
           <span>{`${props.hours}:${props.minutes}`} </span>{" "}
-          <i
-            className="fa fa-trash"
+          <AiFillDelete
+            className="delete"
             onClick={() => {
               props.onSelect(props.id);
             }}
-            aria-hidden="true"
-          ></i>
+          ></AiFillDelete>
         </div>
       </li>
     </>
