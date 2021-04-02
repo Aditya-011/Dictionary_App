@@ -168,6 +168,7 @@ li:hover {
   width: 20px;
   background-color: var(--bgmain);
   margin-right: 20px;
+  cursor: pointer;
 }
 .mainText {
   font-size: 1.5rem;
