@@ -10,14 +10,12 @@ const List = (props) => {
         }}
         aria-hidden="true"
     ></i>*/}
-      <li>
-        <span>
+      <li className="taskWrapper">
+        <div className="t1">
           <input type="checkbox" id="tick" className="tick"></input>
-          <label htmlFor="tick">
-            <b className="mainText">{props.text}</b>
-          </label>
-        </span>
-        <span className="time">
+        </div>
+        <b className="mainText">{props.text}</b>
+        <div className="time">
           <span>{`${props.hours}:${props.minutes}`} </span>{" "}
           <i
             className="fa fa-trash"
@@ -26,7 +24,7 @@ const List = (props) => {
             }}
             aria-hidden="true"
           ></i>
-        </span>
+        </div>
       </li>
     </>
   );
