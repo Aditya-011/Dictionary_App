@@ -1,16 +1,40 @@
-# React ToDo App
 
-This project was built using react and hosted on hereoku.
+# To Do React App
 
-##
+A React app to mark your important tasks.
 
+## Demo
+
+https://to--do-react.herokuapp.com
+  
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm start
 ```
-NPM packages used
+
+  
+## Features
+
+- Mark done tasks
+- Delete unwanted tasks
+- Pop ups to notify 
+- Time and Date markings
+- Simple UI
+
+## NPM packages used
 - react
 - react-hot-toast
 - react-icons
-```
+## Screenshots
 
-For Live demo, [click here:](https://to--do-react.herokuapp.com/)
+![App Screenshot](public/todo.png)
 
-<img src="public/todo.png">
+  
+## Support
+
+For support, email adihgr18@gmail.com
+
+  
