@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+  --bgmain: #f67e7d;
+  --white: #fff;
+  --bg2: #482ff7;
+  --taskgray: #696969;
+  --borderColor: #dbd7d2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bgmain);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--bg2);
+  height: 100vh;
+  width: 100vw;
+  clip-path: polygon(0 0, 100% 0, 100% 86%, 0 38%);
+  z-index: -2;
+}
+.title {
+  text-align: center;
+  color: var(--white);
+  margin-top: 1rem;
+  user-select: none;
+}
+.wrapper {
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 1.5rem;
+  width: 55vw;
+  height: 80vh;
+  background: var(--white);
+  border-radius: 25px;
+}
+.head {
+  display: flex;
+  padding: 2rem 2rem;
+  justify-content: space-between;
+  border-bottom: solid var(--borderColor) 2px;
+  width: 100%;
+  width: 55vw;
+  height: 3rem;
+}
+.dateUp1 {
+  color: var(--bg2);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.dateUp2 {
+  color: var(--bg2);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.dateDown {
+  color: var(--taskgray);
+}
+.task {
+  color: var(--taskgray);
+}
+.taskWrapper {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.mainText {
+  width: 200px;
+  overflow-wrap: break-word;
+  text-align: left;
+  flex: 15;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 55vw;
+
+  border-top: solid 2px var(--borderColor);
+}
+.center_div {
+  max-height: 45vh;
+  min-height: 45vh;
+  width: 55vw;
+  overflow-y: scroll;
+}
+
+.bottom input {
+  height: 1.5rem;
+  padding: 0.2rem 0.7rem;
+  width: 30vw;
+  margin-top: 1.2rem;
+  border: none;
+  border-bottom: 2px solid var(--borderColor);
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+.bottom input:focus {
+  border-bottom: 2px solid var(--bg2);
+}
+.bottom button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  margin-top: 1.2rem;
+  outline: none;
+  background: var(--bg2);
+  color: var(--white);
+  font-size: 2.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+.bottom button:hover {
+  background: var(--bgmain);
+}
+.bottom input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+ol {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+li {
+  margin: 2px;
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-left: 5px solid #fff;
+  transition: 0.2s;
+}
+li:hover {
+  border-left: 5px solid var(--bgmain);
+}
+.tick {
+  display: inline;
+  height: 20px;
+  width: 20px;
+  background-color: var(--bgmain);
+  margin-right: 20px;
+  cursor: pointer;
+}
+.mainText {
+  font-size: 1.5rem;
+  color: var(--taskgray);
+}
+.time {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: var(--taskgray);
+}
+.time :nth-child(1) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.delete {
+  cursor: pointer;
+  color: var(--bg2);
+  font-size: 1.1rem;
+}
+.doneTask {
+  color: var(--borderColor);
+  text-decoration: line-through;
+}
+@media only screen and (max-width: 700px) {
+  .mainText {
+    width: 100px;
+    font-size: 1rem;
+  }
+  .time :nth-child(1) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  li {
+    margin: 2px;
+    height: 20px;
+    width: 100%;
+
+    padding: 0.7rem 0.5rem;
+    border-left: 5px solid #fff;
+    transition: 0.2s;
+  }
+  .wrapper {
+    width: 80vw;
+  }
+  .center_div {
+    width: 75vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .dateUp1,
+  .dateUp2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .dateUp1,
+  .dateUp2 {
+    font-size: 1rem;
+  }
+  .head {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .center_div {
+    min-height: 35vh;
+  }
+  .bottom button {
+    height: 40px;
+    width: 40px;
+    margin-top: 0.5rem;
+  }
+  .bottom input {
+    margin-top: 0.5rem;
+    height: 0.8rem;
+  }
+}
+
+@media only screen and (max-height: 350px) {
+  .center_div {
+    min-height: 25vh;
+    overflow-y: scroll;
+  }
+  .bottom button {
+    height: 40px;
+    width: 40px;
+    margin-top: 0.3rem;
+  }
+  .bottom input {
+    margin-top: 0.3rem;
+    height: 0.8rem;
+  }
+}
