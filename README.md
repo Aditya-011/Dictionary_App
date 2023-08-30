@@ -4,7 +4,7 @@
 Welcome to the Todo React App repository! This project provides a user-friendly web interface for managing tasks and todos. The app allows users to organize their tasks, mark them as completed, and stay on top of their to-do lists.
 
 
-![Todo React App Screenshot](./todo-app-screenshot.png)
+![Todo React App Screenshot](./public/preview.png)
 ## Demo
 
 Check out the live demo of the Todo React App: [Demo Link](https://your-demo-link.com)
