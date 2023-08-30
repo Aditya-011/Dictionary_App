@@ -37,6 +37,8 @@ const Register = () => {
             toast.error("Passwords doesn't match!")
             return
         }
+                  toast("Creating account, please wait!")
+
         try {
           const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/register`, {
             email,
