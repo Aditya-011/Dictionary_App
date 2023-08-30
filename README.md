@@ -7,10 +7,10 @@ Welcome to the Todo React App repository! This project provides a user-friendly 
 ![Todo React App Screenshot](./public/preview.png)
 ## Demo
 
-Check out the live demo of the Todo React App: [Demo Link](https://todo-client-12.netlify.app/)
-Demo User,
-Email : user@test.com
-Password : 123456
+Check out the live demo of the Todo React App: [Demo Link](https://todo-client-12.netlify.app/)<br/>
+Demo User,<br/>
+Email : user@test.com<br/>
+Password : 123456<br/>
 
 
 
