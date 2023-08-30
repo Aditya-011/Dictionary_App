@@ -97,7 +97,7 @@ const Home = () => {
     }, []);
     return (
         <div>
-          <button type="button" class=" absolute top-2.5 right-2.5 font-medium tex-xl text-indigo-500 bg-stone-50 hover:bg-stone-100 focus:ring-4 focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-stone-50 dark:hover:bg-stone-200 focus:outline-none" onClick={logout}> Log Out</button>
+          <button type="button" className=" absolute top-2.5 right-2.5 font-medium tex-xl text-indigo-500 bg-stone-50 hover:bg-stone-100 focus:ring-4 focus:ring-stone-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-stone-50 dark:hover:bg-stone-200 focus:outline-none" onClick={logout}> Log Out</button>
       <h1 className="title text-4xl font-bold">ToDo List</h1>
       <div className="wrapper">
         <div className="head ">
