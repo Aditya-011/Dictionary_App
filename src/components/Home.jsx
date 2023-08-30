@@ -35,6 +35,8 @@ const Home = () => {
     const [inputList, setInputList] = useState("");
     const [items, setItems] = useState([]);
     const fetchTasksByUser = async (userId) => {
+              toast("Fetching user, please wait!")
+
       try {
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/task/gettasks/${userId}`
@@ -50,6 +52,7 @@ const Home = () => {
         toast.error("Please Enter a task!");
         return;
       }
+      toast("Creating task, please wait!")
 
       try {
         const response = await axios.post(
