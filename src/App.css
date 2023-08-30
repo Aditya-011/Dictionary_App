@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --bgmain: #f67e7d;
@@ -9,15 +13,18 @@
 
 * {
   padding: 0;
+  outline: none;
   margin: 0;
 }
 
 body {
   background: var(--bgmain);
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 body::before {
   content: " ";
@@ -29,6 +36,13 @@ body::before {
   width: 100vw;
   clip-path: polygon(0 0, 100% 0, 100% 86%, 0 38%);
   z-index: -2;
+}
+#root{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title {
   text-align: center;
@@ -51,12 +65,12 @@ body::before {
 }
 .head {
   display: flex;
-  padding: 2rem 2rem;
+  align-items: center;
+  padding: 0 2rem;
   justify-content: space-between;
   border-bottom: solid var(--borderColor) 2px;
   width: 100%;
   width: 55vw;
-  height: 3rem;
 }
 .dateUp1 {
   color: var(--bg2);
@@ -92,7 +106,6 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 2rem;
   margin-top: 1rem;
   padding: 1rem;
   width: 55vw;
@@ -263,3 +276,43 @@ li:hover {
     height: 0.8rem;
   }
 }
+/* Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
