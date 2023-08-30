@@ -6,7 +6,11 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import { Toaster } from "react-hot-toast";
 function App() {
-  
+  const login = (token,userId)=>
+  {
+    localStorage.setItem('token',token)
+    localStorage.setItem('userId',userId)
+  }
   
   return (
     <>
@@ -15,7 +19,7 @@ function App() {
   reverseOrder={false}
 />
     <Routes>
-    <Route path="/login" element={<Login/>} />
+    <Route path="/login" element={<Login login={login}/>} />
     <Route path="/register" element={<Register/>} />
     <Route path="/" element={<Home></Home>} ></Route>
     </Routes>

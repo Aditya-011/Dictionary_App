@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { NavLink,useNavigate } from "react-router-dom";
-const Login = () => {
+const Login = ({login}) => {
   const navigate = useNavigate()
   const [email, setemail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,8 +40,7 @@ function isValidPassword(password) {
         email,
         password,
       });
-      localStorage.setItem('token',response.data.token)
-      localStorage.setItem('userId',response.data.userId)
+     login(response.data.token,response.data.userId)
       toast.success("Logged in successfully!");
       navigate('/')
     } catch (error) {
