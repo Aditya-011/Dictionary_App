@@ -7,7 +7,7 @@ Welcome to the Todo React App repository! This project provides a user-friendly 
 ![Todo React App Screenshot](./public/preview.png)
 ## Demo
 
-Check out the live demo of the Todo React App: [Demo Link](https://your-demo-link.com)
+Check out the live demo of the Todo React App: [Demo Link](https://todo-client-12.netlify.app/)
 
 
 
