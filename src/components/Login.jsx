@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { Link,useNavigate } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate()
   const [email, setemail] = useState("");
@@ -68,7 +68,7 @@ function isValidPassword(password) {
                   <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign in</button>
                   <p className="text-sm font-light text-gray-500">
                       Don’t have an account yet?{' '}
-                      <Link to='/register' className="font-medium text-primary-600 hover:underline" replace>Sign up</Link>
+                      <NavLink to='/register' className="font-medium text-primary-600 hover:underline" >Sign up</NavLink>
                   </p>
               </form>
           </div>
