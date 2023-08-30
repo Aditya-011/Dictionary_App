@@ -5,6 +5,8 @@ import axios from "axios";
 const List = ({data,setItems,items}) => {
   const handleDelete = async()=>
   {
+        toast("Deleting task, please wait!")
+
     try {
       await axios.delete(`${import.meta.env.VITE_API_URL}/task/delete/${data._id}`);
       toast.success("Task deleted!")
@@ -17,6 +19,8 @@ const List = ({data,setItems,items}) => {
   }
   const handleEdit = async()=>
   {
+        toast("Updating Task, please wait!")
+
     try {
       const response = await axios.put(`${import.meta.env.VITE_API_URL}/task/edit/${data._id}`,{status : "completed"});
       toast.success("Task Updated!")
