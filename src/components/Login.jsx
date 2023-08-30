@@ -31,8 +31,10 @@ function isValidPassword(password) {
     if(!isValidPassword(password))
     {
       toast.error('Password must be 6 characters long!')
-      //return
+      return
     }
+        toast("Logging you in, please wait!")
+
     try {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/auth/login`, {
         email,
