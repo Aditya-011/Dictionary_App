@@ -68,6 +68,7 @@ const Home = () => {
         setItems([...items, response.data.task]);
         // console.log(response);
         toast.success(response.data.message);
+        setInputList("")
       } catch (error) {
         toast.error("Error creating task");
       }
